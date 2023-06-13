@@ -12,9 +12,9 @@ $TTL	604800
 @	IN	NS	ns1.sp.asa.br.
 ;@	IN	NS	ns2.sp.asa.br.
 @	IN	MX	10 mail.sp.asa.br.
-@	IN	A	106.84.1.15
+@	IN	A	10.25.1.33
 
-ns1	IN	A	106.84.1.15
-mail	IN	A	106.84.1.15
-www	IN	CNAME	ns1
+ns1		IN	A	10.25.1.33
+mail	IN	A	10.25.1.33
+www		IN	CNAME	ns1
 ;ns2	IN	A	secondary
