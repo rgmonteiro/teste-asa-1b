@@ -37,6 +37,19 @@ services:
       - web03
     networks:
       - asa-network
+  dns:
+    build: ./dns
+    image: dns
+    container_name: ns1
+    restart: always
+    tty: true
+    ports:
+      - "53:53/udp"
+      - "53:53/tcp"
+    volumes:
+      - ./dns/primary:/etc/bind
+    networks:
+      - sp-network
 #Docker Networks
 networks:
   asa-network:
