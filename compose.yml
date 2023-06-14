@@ -49,8 +49,9 @@ services:
     volumes:
       - ./dns/primary:/etc/bind
     networks:
-      - sp-network
+      - asa-network
 #Docker Networks
 networks:
   asa-network:
     driver: bridge
+  
