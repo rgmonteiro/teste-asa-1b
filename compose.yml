@@ -50,6 +50,20 @@ services:
       - ./dns/primary:/etc/bind
     networks:
       - asa-network
+  email:
+    build: ./email
+    image: email
+    container_name: email
+    ports:
+      - "25:25/tcp"
+      - "110:110/tcp"
+      - "143:143/tcp"
+      - "587:587/tcp"
+      - "993:993/tcp"
+      - "995:995/tcp"
+    networks:
+      - asa-network
+
 #Docker Networks
 networks:
   asa-network:
